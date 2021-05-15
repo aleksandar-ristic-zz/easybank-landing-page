@@ -12,6 +12,7 @@ body {
   padding: 0;
   font-family: 'Public Sans', sans-serif;
   font-size: $fontMd;
+  font-weight: 300;
   color: $grayishBlue;
   line-height: 1.3;
 }
@@ -22,7 +23,13 @@ a, a:visited, a:hover {
   color: $grayishBlue;
 }
 
-/* *** Flexbox Styles *** */
+/* *** Spacing *** */
+.wrapper {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+/* *** Flexbox *** */
 .flex {
   display: flex;
 
@@ -38,3 +45,29 @@ a, a:visited, a:hover {
     align-items: center;
   }
 }
+
+/* *** Button *** */
+button, .btn {
+  padding: .875rem 2.1875rem;
+  border: 0;
+  border-radius: 50px;
+  font-weight: 700;
+  color: $white;
+  cursor: pointer;
+  background-image: linear-gradient(to right, $limeGreen, $brightCyan);
+}
+
+
+/* *** Visibility *** */
+.hide-mobile {
+  @include breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.hide-desktop {
+  @include breakpoint-up(lg) {
+    display: none;
+  }
+}
+

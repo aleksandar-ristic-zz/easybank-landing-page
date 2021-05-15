@@ -1,26 +1,141 @@
 .header {
-
-  nav {
-    padding: 24px
-  }
+  position: relative;
 
   &__logo {
     img {
-
+      width: 8.8125rem;
+      height: 1.375rem;
     }
   }
 
-  &__menu { // Mobile
+  &__btn { // Mobile
 
     > span {
       display: block;
       width: 26px;
       height: 2px;
       background-color: $darkBlue;
+      transition: 500ms ease-in-out;
+      transform-origin: 3px 1px;
 
       &:not(:last-child) {
-        margin-bottom: 3px;
+        margin-bottom: 5px;
       }
     }
+
+    &.open {
+      > span:first-child {
+        transform: rotate(45deg);
+      }
+
+      > span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-8px);
+      }
+
+      > span:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  nav {
+    position: relative;
+    background-color: $white;
+    padding-top: 1.0625rem;
+    padding-bottom: 1.0625rem;
+  }
+
+  &__links {
+    a {
+      position: relative;
+      transition: color 350ms ease-out;
+
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 5px;
+        right: 0;
+        bottom: -30px;
+        left: 0;
+        opacity: 0;
+        background-image: linear-gradient(to right, $limeGreen, $brightCyan);
+        transition: opacity 350ms ease-in;
+      }
+
+      &:hover {
+        color: $darkBlue;
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__cta {
+    font-size: $fontSm;
+    color: $white;
+    opacity: 1;
+    transition: opacity 350ms ease-out;
+
+    &:hover {
+      opacity: .65;
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    width: calc(100% - 3rem);
+    top: 3.75rem;
+    left: 50%;
+    margin: 1.5rem 0;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    transform: translateX(-50%);
+    border-radius: .5rem;
+    background: $white;
+    overflow: hidden;
+
+    a {
+      display: block;
+      padding: 0.625rem 0;
+      color: $darkBlue;
+      text-align: center;
+      transform: translateX(600px);
+      transition: transform 3500ms ease-in;
+    }
+
+    &.open {
+      a {
+        transform: translateX(0);
+      }
+
+      @for $x from 1 through 5 {
+        &:nth-child(#{$x}) {
+            transition-delay: $x * .1s;
+        }
+      }
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 3.75rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: $darkBlue;
+  background: linear-gradient($darkBlue, transparent);
+
+  &.open {
+    display: block;
   }
 }

@@ -9,35 +9,31 @@
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="dist/style.css">
   <title>Frontend Mentor | Easybank landing page</title>
-
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 <!--=== Header ===-->
   <header class="header">
-    <nav class="flex flex-justify-between flex-align-center">
+    <div class="overlay hidden" data-hide></div>
+    <nav class="flex flex-justify-between flex-align-center wrapper">
       <a href="/" class="header__logo">
         <img src="images/logo.svg" alt="Easybank">
       </a>
 
-      <a href="#!" class="header__menu">
+      <a href="#!" class="header__btn hide-desktop">
         <span></span>
         <span></span>
         <span></span>
       </a>
 
-      <div class="header__links">
-        <a href="#!">Home</a>
-        <a href="#!">About</a>
-        <a href="#!">Contact</a>
-        <a href="#!">Blog</a>
-        <a href="#!">Careers</a>
+      <div class="header__links hide-mobile">
+        <a href="#!">Home</a><a href="#!">About</a><a href="#!">Contact</a><a href="#!">Blog</a><a href="#!">Careers</a>
       </div>
-      <button type="button">Reqest Invite</button>
+      <button type="button" class="header__cta hide-mobile btn">Request Invite</button>
     </nav>
+
+    <div class="header__menu hidden wrapper" data-hide>
+      <a href="#!">Home</a><a href="#!">About</a><a href="#!">Contact</a><a href="#!">Blog</a><a href="#!">Careers</a>
+    </div>
   </header>
 
 <!--
