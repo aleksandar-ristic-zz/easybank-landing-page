@@ -17,6 +17,11 @@
     min-height: 17.6rem;
 
     @include breakpoint-up(lg) {
+      min-height: 25rem;
+      background-size: 55%;
+    }
+
+    @include breakpoint-up(lg) {
       flex: 3;
       order: 2;
       min-height: 41rem;
@@ -35,8 +40,8 @@
 
       @include breakpoint-up(lg) {
         width: 150%;
-        background-size: 122%;
-        background-position: 0 83%;
+        background-size: 130%;
+        background-position: 9% 70%;
       }
     }
 

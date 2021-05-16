@@ -320,6 +320,13 @@ button, .btn {
 
 @media (min-width: 64em) {
   .hero__img {
+    min-height: 25rem;
+    background-size: 55%;
+  }
+}
+
+@media (min-width: 64em) {
+  .hero__img {
     flex: 3;
     order: 2;
     min-height: 41rem;
@@ -341,8 +348,8 @@ button, .btn {
 @media (min-width: 64em) {
   .hero__img::before {
     width: 150%;
-    background-size: 122%;
-    background-position: 0 83%;
+    background-size: 130%;
+    background-position: 9% 70%;
   }
 }
 
