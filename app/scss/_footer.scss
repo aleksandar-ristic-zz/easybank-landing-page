@@ -1,0 +1,113 @@
+.footer {
+  padding: 2.5rem;
+  text-align: center;
+  color: $white;
+  background-color: $darkBlue;
+
+  a {
+    color: $white;
+  }
+
+  &__grid {
+    @include breakpoint-up(lg) {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 3fr;
+      grid-template-rows: 1fr auto;
+      gap: 1rem;
+      grid-template-areas: 
+      'logo group1 group2 cta'
+      'social group1 group2 cr';
+      justify-items: start;
+    }
+  }
+  
+  &__logo {
+    display: inline-block;
+    margin-bottom: 1.875rem;
+
+    @include breakpoint-up(lg) {
+      grid-area: logo;
+      margin-bottom: 0;
+    }
+  }
+
+  &__social {
+    margin-bottom: 1.875rem;
+    
+
+    a {
+      display: inline-block;
+      font-size: 1.5rem;
+    }
+
+    a:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    
+
+    @include breakpoint-up(lg) {
+      height: 1.5rem;
+      margin-bottom: 0;
+      grid-area: social;
+      align-self: end;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: $fontSm;
+
+    &.group1 {
+      @include breakpoint-up(lg) {
+        grid-area: group1;
+      }
+    }
+
+    &.group2 {
+      margin-bottom: 1.875rem;
+
+      @include breakpoint-up(lg) {
+        grid-area: group2;
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      line-height: 2;
+    }
+
+    @include breakpoint-up(lg) {
+      align-items: start;
+      justify-content: space-between;
+
+      a {
+        line-height: 1;
+      }
+    }
+  }
+
+  &__cta {
+    a.btn {
+      margin-bottom: 1.875rem;
+    }
+
+    @include breakpoint-up(lg) {
+      grid-area: cta;
+      justify-self: end;
+    }
+  }
+
+  &__cr {
+    font-size: $fontSm;
+    color: $grayishBlue;
+
+    @include breakpoint-up(lg) {
+      grid-area: cr;
+      justify-self: end;
+      align-self: end;
+    }
+  }
+}
