@@ -38,6 +38,37 @@ a, a:visited, a:hover {
 
 h1, h2, h3 {
   margin-top: 0;
+  font-weight: 300;
+  line-height: 1.15;
+  color: #2d314d;
+}
+
+h1 {
+  font-size: 2.31rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 64em) {
+  h1 {
+    font-size: 3.2rem;
+  }
+}
+
+h2 {
+  font-size: 1.875rem;
+  margin-bottom: 1.5625rem;
+  color: #2d314d;
+}
+
+@media (min-width: 64em) {
+  h2 {
+    font-size: 2.25rem;
+    margin-bottom: 2.25rem;
+  }
+}
+
+p {
+  line-height: 1.5;
 }
 
 /* *** Spacing *** */
@@ -46,8 +77,14 @@ h1, h2, h3 {
   margin: 0 auto;
 }
 
-.wrapper-p {
-  padding: 2.25rem 1.5rem;
+.wrapper--p {
+  padding: 4.375rem 1.5rem;
+}
+
+@media (min-width: 64em) {
+  .wrapper--p {
+    padding: 6rem 1.5rem;
+  }
 }
 
 .wrapper--px {
@@ -56,16 +93,35 @@ h1, h2, h3 {
 }
 
 .wrapper--py {
-  padding-top: 2.25rem;
-  padding-bottom: 2.25rem;
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
+}
+
+@media (min-width: 64em) {
+  .wrapper--py {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
 }
 
 .wrapper--pt {
-  padding-top: 2.25rem;
+  padding-top: 4.375rem;
+}
+
+@media (min-width: 64em) {
+  .wrapper--pt {
+    padding-top: 6rem;
+  }
 }
 
 .wrapper--pb {
-  padding-bottom: 2.25rem;
+  padding-bottom: 4.375rem;
+}
+
+@media (min-width: 64em) {
+  .wrapper--pb {
+    padding-bottom: 6rem;
+  }
 }
 
 .wrapper--l {
@@ -74,11 +130,6 @@ h1, h2, h3 {
 
 .wrapper--r {
   padding-right: 1.5rem;
-}
-
-.wrapper-x {
-  max-width: 69.375rem;
-  margin: 0 auto;
 }
 
 /* *** Flexbox *** */
@@ -228,7 +279,7 @@ button, .btn {
 }
 
 .header__links a:not(:last-child) {
-  margin-right: 32px;
+  margin-right: 2rem;
 }
 
 .header__links a::before {
@@ -318,10 +369,10 @@ button, .btn {
   min-height: 17.6rem;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 40em) {
   .hero__img {
     min-height: 25rem;
-    background-size: 55%;
+    background-position: center 60%;
   }
 }
 
@@ -364,6 +415,12 @@ button, .btn {
   background-position: center bottom;
 }
 
+@media (min-width: 40em) {
+  .hero__img::after {
+    background-size: 55%;
+  }
+}
+
 @media (min-width: 64em) {
   .hero__img::after {
     width: 120%;
@@ -378,16 +435,7 @@ button, .btn {
   text-align: center;
 }
 
-.hero__text h1 {
-  font-weight: 300;
-  font-size: 2.31rem;
-  line-height: 1.15;
-  color: #2d314d;
-  margin-bottom: 1.5rem;
-}
-
 .hero__text p {
-  line-height: 1.5;
   margin-bottom: 2.25rem;
 }
 
@@ -404,7 +452,74 @@ button, .btn {
     flex: 2;
     text-align: left;
   }
-  .hero__text h1 {
-    font-size: 3.2rem;
+}
+
+.why {
+  text-align: center;
+  background-color: #f3f4f6;
+}
+
+@media (min-width: 40em) {
+  .why {
+    text-align: left;
   }
+}
+
+@media (min-width: 40em) {
+  .why__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.why__head {
+  margin-bottom: 3.75rem;
+}
+
+@media (min-width: 64em) {
+  .why__head {
+    width: 58%;
+  }
+}
+
+.why__item {
+  padding: 0.9375rem;
+}
+
+@media (min-width: 40em) {
+  .why__item {
+    flex: 0 0 50%;
+  }
+}
+
+@media (min-width: 64em) {
+  .why__item {
+    flex: 1;
+  }
+}
+
+.why__icon {
+  margin-bottom: 1.75rem;
+}
+
+@media (min-width: 64em) {
+  .why__icon {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.why__title {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 64em) {
+  .why__title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.why__desc {
+  font-size: 0.875rem;
 }

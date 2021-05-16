@@ -1,0 +1,59 @@
+.why {
+  text-align: center;
+  background-color: $lightGrayishBlue;
+
+  @include breakpoint-up(md) {
+    text-align: left;
+  }
+
+  &__container {
+
+    @include breakpoint-up(md) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__head {
+    margin-bottom: 3.75rem;
+
+    @include breakpoint-up(lg) {
+      width: 58%;
+    }
+  }
+
+  &__item {
+    padding: 0.9375rem;
+
+    @include breakpoint-up(md) {
+      flex: 0 0 50%;
+    }
+
+    @include breakpoint-up(lg) {
+      flex: 1;
+    }
+  }
+
+  &__icon {
+    margin-bottom: 1.75rem;
+
+    @include breakpoint-up(lg) {
+      margin-bottom: 2.5rem;
+    }
+   
+  }
+
+  &__title {
+    font-size: $fontMd;
+    margin-bottom: 1rem;
+
+    @include breakpoint-up(lg) {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }  
+  }
+
+  &__desc {
+    font-size: $fontSm;
+  }
+}
