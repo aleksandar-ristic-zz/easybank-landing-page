@@ -23,7 +23,7 @@
   
   &__logo {
     display: inline-block;
-    margin-bottom: 1.875rem;
+    margin-bottom: $uniSize;
 
     @include breakpoint-up(lg) {
       grid-area: logo;
@@ -32,12 +32,12 @@
   }
 
   &__social {
-    margin-bottom: 1.875rem;
+    margin-bottom: $uniSize;
     
 
     a {
       display: inline-block;
-      font-size: 1.5rem;
+      font-size: $uniSizeSm;
 
       svg path {
         transition: fill 200ms ease-in;
@@ -53,7 +53,7 @@
     }
 
     @include breakpoint-up(lg) {
-      height: 1.5rem;
+      height: $uniSizeSm;
       margin-bottom: 0;
       grid-area: social;
       align-self: end;
@@ -73,7 +73,7 @@
     }
 
     &.group2 {
-      margin-bottom: 1.875rem;
+      margin-bottom: $uniSize;
 
       @include breakpoint-up(lg) {
         grid-area: group2;
@@ -102,7 +102,7 @@
 
   &__cta {
     a.btn {
-      margin-bottom: 1.875rem;
+      margin-bottom: $uniSize;
       transition: 200ms ease-in;
     }
 

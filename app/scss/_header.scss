@@ -8,7 +8,8 @@
     }
   }
 
-  &__btn { // Mobile
+  // Mobile
+  &__btn { 
 
     > span {
       display: block;
@@ -62,7 +63,7 @@
         width: 100%;
         height: 5px;
         right: 0;
-        bottom: -30px;
+        bottom: -$uniSize;
         left: 0;
         opacity: 0;
         background-image: linear-gradient(to right, $limeGreen, $brightCyan);
@@ -88,9 +89,9 @@
     width: calc(100% - 3rem);
     top: 3.75rem;
     left: 50%;
-    margin: 1.5rem 0;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    margin: $uniSizeSm 0;
+    padding-top: $uniSizeSm;
+    padding-bottom: $uniSizeSm;
     border-radius: .5rem;
     background: $white;
     transform: translateX(-50%);
@@ -98,7 +99,7 @@
 
     a {
       display: block;
-      padding: 0.625rem 0;
+      padding: .625rem 0;
       color: $darkBlue;
       text-align: center;
     }

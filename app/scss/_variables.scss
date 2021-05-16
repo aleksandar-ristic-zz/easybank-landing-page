@@ -8,11 +8,14 @@ $brightCyan: hsl(192, 70%, 51%);
 $grayishBlue: hsl(233, 8%, 62%);
 $lightGrayishBlue: hsl(220, 16%, 96%);
 $veryLightGray: hsl(0, 0%, 98%);
-
 $white: hsl(0, 0%, 100%);
 
-/* *** Font Size *** */
+// Font Size base size 16px
 $fontSm: .875rem; // 14px
 $fontMd: 1.125rem; // 18px
 $fontLg: 1.25rem; // 20px
 $fontXl: 3.2rem; // 50px
+
+// Useful sizes
+$uniSize: 1.875rem; // 30px
+$uniSizeSm: 1.5rem;

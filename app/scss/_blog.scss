@@ -4,7 +4,7 @@
   &__grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.875rem;
+    gap: $uniSize;
 
     @include breakpoint-up(md) {
       grid-template-columns: repeat(2, 1fr);
@@ -34,18 +34,18 @@
   }
 
   &__text {
-    padding: 1.875rem;
+    padding: $uniSize;
     padding-bottom: 2.5rem;
     color: $grayishBlue;
 
     @include breakpoint-up(md) {
-      padding: 1.875rem 1.5625rem;
+      padding: $uniSize 1.5625rem;
     }
   }
 
   &__author {
     display: inline-block;
-    font-size: 0.625rem;
+    font-size: .625rem;
     margin-bottom: .625rem;
   }
 

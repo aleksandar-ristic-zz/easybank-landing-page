@@ -41,7 +41,7 @@ h1, h2, h3 {
 
 h1 {
   font-size: 2.31rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: $uniSizeSm;
 
   @include breakpoint-up(lg) {
       font-size: $fontXl;
@@ -49,8 +49,8 @@ h1 {
 }
 
 h2 {
-  font-size: 1.875rem;
-  margin-bottom: 1.5625rem;
+  font-size: $uniSize;
+  margin-bottom: $uniSizeSm;
   color: $darkBlue;
 
   @include breakpoint-up(lg) {
@@ -89,30 +89,6 @@ p {
       padding-top: 6rem;
       padding-bottom: 6rem
     }
-  }
-  
-  &--pt {
-    padding-top: 4.375rem;
-
-    @include breakpoint-up(lg) {
-      padding-top: 6rem
-    }
-  }
-
-  &--pb {
-    padding-bottom: 4.375rem;
-
-    @include breakpoint-up(lg) {
-      padding-bottom: 6rem;
-    }
-  }
-
-  &--l {
-    padding-left: 1.5rem;
-  }
-
-  &--r {
-    padding-right: 1.5rem;
   }
 }
 
