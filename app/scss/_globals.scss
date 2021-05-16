@@ -15,6 +15,14 @@ body {
   font-weight: 300;
   color: $grayishBlue;
   line-height: 1.3;
+
+  &.stopper {
+    overflow: hidden;
+  }
+
+  @include breakpoint-up(lg) {
+    font-size: $fontMd;
+  }
 }
 
 a, a:visited, a:hover {
@@ -23,10 +31,50 @@ a, a:visited, a:hover {
   color: $grayishBlue;
 }
 
+h1, h2, h3 {
+  margin-top: 0;
+}
+
 /* *** Spacing *** */
 .wrapper {
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+  max-width: 69.375rem;
+  margin: 0 auto;
+
+  &-p {
+    padding: 2.25rem 1.5rem;
+  }
+
+  &--px {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  &--py {
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+  }
+  
+  &--pt {
+    padding-top: 2.25rem;
+  }
+
+  &--pb {
+    padding-bottom: 2.25rem;
+  }
+
+  &--l {
+    padding-left: 1.5rem;
+  }
+
+  &--r {
+    padding-right: 1.5rem;
+  }
+}
+
+.wrapper-x {
+  
+  max-width: 69.375rem;
+  margin: 0 auto;
 }
 
 /* *** Flexbox *** */
@@ -48,10 +96,12 @@ a, a:visited, a:hover {
 
 /* *** Button *** */
 button, .btn {
+  display: inline-block;
   padding: .875rem 2.1875rem;
   border: 0;
   border-radius: 50px;
   font-weight: 700;
+  font-size: $fontSm;
   color: $white;
   cursor: pointer;
   background-image: linear-gradient(to right, $limeGreen, $brightCyan);

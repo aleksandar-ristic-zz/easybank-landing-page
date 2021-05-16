@@ -1,0 +1,97 @@
+.hero {
+  background-color: $veryLightGray;
+
+  @include breakpoint-up(lg) {
+    .wrapper {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__img {
+    position: relative;
+    background-image: url('../../images/bg-intro-mobile.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 17.6rem;
+
+    @include breakpoint-up(lg) {
+      flex: 3;
+      order: 2;
+      min-height: 41rem;
+      background-image: none;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: url('../../images/bg-intro-desktop.svg');
+      background-size: 94%;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+
+      @include breakpoint-up(lg) {
+        width: 150%;
+        background-size: 122%;
+        background-position: 0 83%;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: url('../../images/image-mockups.png');
+      background-size: 94%;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+
+      @include breakpoint-up(lg) {
+        width: 120%;
+        height: 122%;
+        left: 22%;
+        background-size: 94%;
+        background-position: center 150%;
+      }
+    }
+
+  }
+
+  &__text {
+    text-align: center;
+
+    h1 {
+      font-weight: 300;
+      font-size: 2.31rem;
+      line-height: 1.15;
+      color: $darkBlue;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      line-height: 1.5;
+      margin-bottom: 2.25rem;
+    }
+   
+    a.hero__cta {
+      color: $white;
+  
+      &:hover {
+        opacity: .65;
+      }
+    }
+
+    @include breakpoint-up(lg) {
+      flex: 2;
+      text-align: left;
+      
+      h1 {
+        font-size: $fontXl;
+      }
+    }
+  }
+}

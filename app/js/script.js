@@ -1,14 +1,29 @@
 // Mobile menu
 const showEl = document.querySelectorAll('[data-hide]');
+const links = document.querySelector('.links');
+const body = document.querySelector('body');
 
 document.querySelector('.header__btn')
 .addEventListener('click', function() {
 
   this.classList.toggle('open');
-  
-  this.classList.contains('open') ? 
-  showEl.forEach(el => openAnim(el)) :
-  showEl.forEach(el => closeAnim(el))
+
+  if (this.classList.contains('open')) {
+    showEl.forEach(el => openAnim(el))
+
+    links.classList.remove('hide-links');
+    links.classList.add('show-links');
+
+    body.classList.add('stopper');
+
+  } else {
+    showEl.forEach(el => closeAnim(el))
+
+    links.classList.remove('show-links');
+    links.classList.add('hide-links');
+
+    body.classList.remove('stopper');
+  }
 });
 
 function openAnim(el) {

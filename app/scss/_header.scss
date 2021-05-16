@@ -80,7 +80,6 @@
   }
 
   &__cta {
-    font-size: $fontSm;
     color: $white;
     opacity: 1;
     transition: opacity 350ms ease-out;
@@ -98,9 +97,9 @@
     margin: 1.5rem 0;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-    transform: translateX(-50%);
     border-radius: .5rem;
     background: $white;
+    transform: translateX(-50%);
     overflow: hidden;
 
     a {
@@ -108,27 +107,13 @@
       padding: 0.625rem 0;
       color: $darkBlue;
       text-align: center;
-      transform: translateX(600px);
-      transition: transform 3500ms ease-in;
-    }
-
-    &.open {
-      a {
-        transform: translateX(0);
-      }
-
-      @for $x from 1 through 5 {
-        &:nth-child(#{$x}) {
-            transition-delay: $x * .1s;
-        }
-      }
     }
   }
 }
 
 .overlay {
   position: fixed;
-  top: 3.75rem;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;

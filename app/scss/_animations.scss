@@ -8,7 +8,7 @@
 }
 
 .fade-in {
-  animation: fadeIn 500ms ease-in forwards;
+  animation: fadeIn 350ms ease-in forwards;
 }
 
 @keyframes fadeOut {
@@ -21,9 +21,38 @@
 }
 
 .fade-out {
-  animation: fadeOut 500ms ease-in forwards;
+  animation: fadeOut 350ms ease-in forwards;
 }
+
+@keyframes showLinks{
+ from {
+  transform: translateY(50px);
+ }
+ to {
+  transform: translateY(0);
+ }
+}
+
+.show-links {
+  animation: showLinks 350ms ease-in forwards 200ms;
+}
+
+@keyframes hideLinks{
+  from {
+   transform: translateY(0);
+  }
+  to {
+   transform: translateY(50px);
+  }
+ }
+
+ .hide-links {
+   animation: hideLinks 350ms ease-out forwards;
+ }
+
+
 
 .hidden {
   display: none;
 }
+
