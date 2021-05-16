@@ -38,13 +38,19 @@
     a {
       display: inline-block;
       font-size: 1.5rem;
+
+      svg path {
+        transition: fill 200ms ease-in;
+      }
+
+      &:hover svg path {
+        fill: $limeGreen
+      }
     }
 
     a:not(:last-child) {
       margin-right: 1rem;
     }
-
-    
 
     @include breakpoint-up(lg) {
       height: 1.5rem;
@@ -77,6 +83,11 @@
 
     a {
       line-height: 2;
+      transition: color 200ms ease-in;
+
+      &:hover {
+        color: $limeGreen;
+      }
     }
 
     @include breakpoint-up(lg) {
@@ -92,6 +103,7 @@
   &__cta {
     a.btn {
       margin-bottom: 1.875rem;
+      transition: 200ms ease-in;
     }
 
     @include breakpoint-up(lg) {

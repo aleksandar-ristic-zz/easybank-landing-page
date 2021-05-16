@@ -135,6 +135,7 @@ p {
 
 /* *** Button *** */
 button, .btn {
+  position: relative;
   display: inline-block;
   padding: .875rem 2.1875rem;
   border: 0;
@@ -144,6 +145,23 @@ button, .btn {
   color: $white;
   cursor: pointer;
   background-image: linear-gradient(to right, $limeGreen, $brightCyan);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    border-radius: inherit;
+    background-color: rgba($color: $white, $alpha: .25);
+    transition: opacity 200ms ease-in;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
 }
 
 

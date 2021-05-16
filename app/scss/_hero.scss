@@ -78,10 +78,6 @@
    
     a.hero__cta {
       color: $white;
-  
-      &:hover {
-        opacity: .65;
-      }
     }
 
     @include breakpoint-up(lg) {

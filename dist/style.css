@@ -162,6 +162,7 @@ p {
 
 /* *** Button *** */
 button, .btn {
+  position: relative;
   display: inline-block;
   padding: .875rem 2.1875rem;
   border: 0;
@@ -172,6 +173,24 @@ button, .btn {
   cursor: pointer;
   background-image: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
   background-image: linear-gradient(to right, #31d35c, #2bb7da);
+}
+
+button::before, .btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: inherit;
+  background-color: rgba(255, 255, 255, 0.25);
+  -webkit-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in;
+}
+
+button:hover::before, .btn:hover::before {
+  opacity: 1;
 }
 
 /* *** Visibility *** */
@@ -374,13 +393,6 @@ button, .btn {
 
 .header__cta {
   color: white;
-  opacity: 1;
-  -webkit-transition: opacity 350ms ease-out;
-  transition: opacity 350ms ease-out;
-}
-
-.header__cta:hover {
-  opacity: .65;
 }
 
 .header__menu {
@@ -520,10 +532,6 @@ button, .btn {
 
 .hero__text a.hero__cta {
   color: white;
-}
-
-.hero__text a.hero__cta:hover {
-  opacity: .65;
 }
 
 @media (min-width: 64em) {
@@ -733,6 +741,15 @@ button, .btn {
   font-size: 1.5rem;
 }
 
+.footer__social a svg path {
+  -webkit-transition: fill 200ms ease-in;
+  transition: fill 200ms ease-in;
+}
+
+.footer__social a:hover svg path {
+  fill: #31d35c;
+}
+
 .footer__social a:not(:last-child) {
   margin-right: 1rem;
 }
@@ -781,6 +798,12 @@ button, .btn {
 
 .footer__links a {
   line-height: 2;
+  -webkit-transition: color 200ms ease-in;
+  transition: color 200ms ease-in;
+}
+
+.footer__links a:hover {
+  color: #31d35c;
 }
 
 @media (min-width: 64em) {
@@ -799,6 +822,8 @@ button, .btn {
 
 .footer__cta a.btn {
   margin-bottom: 1.875rem;
+  -webkit-transition: 200ms ease-in;
+  transition: 200ms ease-in;
 }
 
 @media (min-width: 64em) {

@@ -81,12 +81,6 @@
 
   &__cta {
     color: $white;
-    opacity: 1;
-    transition: opacity 350ms ease-out;
-
-    &:hover {
-      opacity: .65;
-    }
   }
 
   &__menu {
